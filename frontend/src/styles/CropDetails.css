@@ -1,0 +1,171 @@
+.crop-details {
+  padding: 20px;
+  max-width: 1200px;
+  margin: auto;
+  /* background-color: #aafdaa; */
+}
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.main-image {
+  width: 100%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.section-title {
+  margin-top: 2rem;
+  font-size: 1.5rem;
+}
+
+.quality-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 20px;
+  margin-top: 20px;
+}
+
+.quality-card {
+  text-align: center;
+}
+
+.quality-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+/*
+
+@media (max-width: 600px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .main-image {
+    height: 250px;
+  }
+
+  .quality-card img {
+    height: 150px;
+  }
+} */
+
+h1 {
+  font-size: 2rem;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.crop-details {
+  padding: 20px;
+}
+
+.main-crop-image {
+  width: 100%;
+  border-radius: 8px;
+  margin-top: 1rem;
+}
+
+.quality-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 1rem;
+}
+
+.quality-card {
+  flex: 1;
+  min-width: 250px;
+}
+
+.quality-card img {
+  width: 100%;
+  border-radius: 6px;
+  margin: 10px 0;
+}
+
+.quality-card p {
+  font-size: 14px;
+  color: #444;
+}
+
+h2,p{
+  font-family: 'Courier New', Courier, monospace;
+  color: black;
+}
+
+
+
+
+
+/* Responsive */
+@media (max-width: 768px) {
+/* 
+    h1 {
+    font-size: 1.5rem;
+  }
+
+  .quality-grid {
+    flex-direction: column;
+  } */
+
+
+  .crop-details {
+  text-align: center;
+  padding: 20px;
+}
+
+
+.quality-grid {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 20px;
+}
+
+
+
+/* .quality-card {
+  max-width: 300px;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+} */
+
+
+
+.quality-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+} 
+
+  @media (max-width: 768px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .quality-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+
+  .quality-card {
+    flex: 0 0 calc(50% - 10px); /* roughly half width minus gap */
+    min-width: auto; /* override min-width for mobile */
+  }
+}
+}
+
+

@@ -1,0 +1,130 @@
+/* Container */
+.user-product-details {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+}
+
+/* Heading */
+.user-product-details h2 {
+  font-size: 24px;
+  margin-bottom: 1.5rem;
+  color: #333;
+  text-align: center;
+}
+
+/* Controls */
+.controls {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  justify-content: center;
+}
+
+.controls input,
+.controls select {
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 0.5rem 0.8rem;
+  outline: none;
+  min-width: 220px;
+}
+
+.controls input:focus,
+.controls select:focus {
+  border-color: #007bff;
+}
+
+/* Grid for Cards */
+.price-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 1.5rem;
+}
+
+/* Card Style */
+.price-card {
+  background-color: #fff;
+  padding: 1.2rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  transition: transform 0.2s ease;
+  text-align: center;
+}
+
+.price-card:hover {
+  transform: translateY(-3px);
+}
+
+/* Card Text */
+.price-card p {
+  margin: 0.4rem 0;
+  color: #444;
+  font-size: 15px;
+}
+
+/* Image */
+.profile-img {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin-bottom: 0.6rem;
+}
+
+/* Name */
+.price-card h3 {
+  margin: 0.5rem 0;
+  color: #2c3e50;
+  font-size: 18px;
+}
+
+/* Button */
+.price-card button {
+  margin-top: 0.8rem;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color 0.2s ease;
+}
+
+.price-card button:hover {
+  background-color: #0056b3;
+}
+
+/* No Results Text */
+.no-results {
+  text-align: center;
+  color: #777;
+  font-style: italic;
+  margin-top: 2rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .user-product-details {
+    padding: 1rem;
+  }
+
+  .user-product-details h2 {
+    font-size: 20px;
+    text-align: center;
+  }
+
+  .controls {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .price-grid {
+    grid-template-columns: 1fr;
+  }
+}

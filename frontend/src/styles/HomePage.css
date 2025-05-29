@@ -1,0 +1,237 @@
+/* Base styles */
+.homepage {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+  line-height: 1.6;
+  
+}
+
+/* Hero Section */
+.hero {
+  text-align: center;
+  padding: 2rem 1rem;
+  background: #f9f9f9;
+}
+
+.hero h1 {
+  font-size: 2.5rem;
+}
+
+.hero img {
+  max-width: 100%;
+  height: auto;
+  margin-top: 1rem;
+  border-radius: 10px;
+}
+
+/* Section Wrapper */
+.section {
+  padding: 2rem 1rem;
+}
+
+.section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+}
+
+/* Grid for Crop Cards */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background: #fff;
+  border: 1px solid #ddd;
+  padding: 1rem;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Feature Section Layout */
+.feature-layout {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.feature-layout .text {
+  flex: 1;
+  min-width: 280px;
+  max-width: 600px;
+}
+
+.feature-layout .text div {
+  margin-bottom: 1.5rem;
+}
+
+.feature-layout h4 {
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.feature-layout p {
+  font-size: 1rem;
+  color: #555;
+}
+
+.feature-layout img {
+  flex: 1;
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+/* Buttons */
+.buttons {
+  margin-top: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+button.primary,
+button.secondary {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+
+button.primary {
+  background: black;
+  color: white;
+}
+
+button.secondary {
+  background: #e0e0e0;
+  color: #000;
+}
+
+/* Testimonials Section */
+.testimonials .cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+  justify-content: center;
+}
+
+.testimonial-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  border-radius: 10px;
+  max-width: 300px;
+  background: #fff;
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.author img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+/* Call to Action Section */
+.send-message {
+  background: #f0f0f0;
+  text-align: center;
+  padding: 2rem 1rem;
+}
+
+/* Footer */
+footer {
+  border-top: 1px solid #ccc;
+  padding: 2rem 1rem;
+  background: #fafafa;
+}
+
+.footer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.footer-grid > div {
+  flex: 1 1 200px;
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .feature-layout {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-layout .text {
+    max-width: 100%;
+  }
+
+  .feature-layout img {
+    max-width: 100%;
+    margin-top: 1rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  button.primary,
+  button.secondary {
+    width: 100%;
+  }
+
+  .testimonials .cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+  }
+
+  .testimonial-card {
+    max-width: 100%;
+  }
+
+  .feature-layout {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+
+  .feature-layout .text div {
+    margin-bottom: 1rem;
+  }
+
+  .footer-grid {
+    flex-direction: row;
+    text-align: center;
+  }
+}
