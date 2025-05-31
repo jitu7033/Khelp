@@ -24,7 +24,10 @@ export const createAdmin = async (username,firstname,lastname,mobile,email,passw
 
 export const createCropsPriceByAdmin = async (crop_type_id,crop_type,businessman_id,price,unit) => {
 
-    const [id] = await pool.query('SELECT * FROM crop_types WHERE crop_id = ? AND type_name = ?',[crop_type_id,crop_type]);
+  console.log("crop type id " ,crop_type," ", crop_type_id);
+
+    const [id] = await pool.query('SELECT * FROM crop_types WHERE crop_id = ? AND trim(type_name) = ?',[crop_type_id,crop_type]);
+    console.log(id);
     const crop_id = id[0].id;
     const [result] = await pool.query('INSERT INTO prices(crop_type_id,businessman_id,price,unit) VALUES(?,?,?,?)', [crop_id,businessman_id,price,unit]);
     return result.insertId;
@@ -37,7 +40,7 @@ export const getAllCropsPriceByCropTypeid = async (businessman_id,crop_id, crop_
   console.log("businessman_id", businessman_id);
   console.log("crop_id", crop_id);
   
-  const [id] = await pool.query('SELECT id FROM crop_types WHERE crop_id = ? AND type_name = ?', [crop_id, crop_type]);
+  const [id] = await pool.query('SELECT id FROM crop_types WHERE crop_id = ? AND trim(type_name) = ?', [crop_id, crop_type]);
 
   console.log("id", id);
   const crop_type_id = id.length > 0 ? id[0].id : '';

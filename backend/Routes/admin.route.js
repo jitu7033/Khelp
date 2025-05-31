@@ -17,9 +17,10 @@ router.get("/profile", isLoggedIn, (req,res) => {
 
 // add price by admin 
 
-router.post("/add/price", isLoggedIn, (req,res) => {
+router.post("/add/price", isLoggedIn, async (req,res) => {
   const {crop_type_id, crop_type, price, unit} = req.body;
   const adminId = req.admin.id;
+
 
 
   // console.log("Admin ID:", req.body);
@@ -35,7 +36,8 @@ router.post("/add/price", isLoggedIn, (req,res) => {
     return res.status(401).json({error: "Unauthorized"});
   }
   try{
-    const id = createCropsPriceByAdmin(crop_type_id, crop_type,  adminId, price, unit);
+    const id = await createCropsPriceByAdmin(crop_type_id, crop_type,  adminId, price, unit);
+    console.log(id);
     res.status(201).json({message: "Price added successfully", priceId: id});
   }
   catch(error) {

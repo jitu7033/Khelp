@@ -62,7 +62,7 @@ export const  getAllPricesByCropAndType = async (req, res) => {
       FROM prices
       JOIN crop_types ON prices.crop_type_id = crop_types.id
       JOIN admin ON prices.businessman_id = admin.id
-      WHERE crop_types.crop_id = ? AND crop_types.type_name = ?
+      WHERE crop_types.crop_id = ? AND trim(crop_types.type_name) = ?
     `;
     
     const [results] = await pool.execute(query, [crop_id, type_name]);
