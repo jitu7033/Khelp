@@ -1,0 +1,12 @@
+login 
+api 
+
+{
+  "email":"abcd@gmail.com",
+  "password":"abc123",
+  "name":"jitendra",
+  "username":"jitu1234"
+},
+
+
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJlbWFpbCI6ImFiY2RAZ21haWwuY29tIiwiaWQiOiI2OTQwZTNmN2U5ZDdjZjU4YzFmYjk1NmYiLCJ0b2tlbiI6IjhhZDZjMWM0LWM2ODMtNGFiMC1hY2RmLWRmZDExNGRmNzNkZSIsImlhdCI6MTc2NTg2MTk3OH0.cKRAaJUPJ5feMSp_bYRFF9bHzVMjaNU1A3lIXNZ9J78",

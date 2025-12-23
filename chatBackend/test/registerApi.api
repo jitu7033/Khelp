@@ -1,0 +1,8 @@
+http://localhost:3000/api/register
+
+{
+  "email":"abc@gmail.com",
+  "password":"abc123",
+  "name":"jitendra",
+  "username":"jitu123"
+}
